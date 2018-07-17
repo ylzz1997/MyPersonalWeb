@@ -1,0 +1,35 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main{
+	margin-top: 200px;
+}
+
+.title{
+	font-weight: 800;
+	padding: 20px 0;
+	font-size: 55px;
+}
+
+.contain{
+	padding: 15px 0;
+	font-size:25px;
+	font-weight: 400;
+}
+
+label{
+	margin:-5px 0;
+}
+
+button{
+	margin-top:15px;
+	width:80%;
+}
+
+#imformation{
+	font-size:18px;
+}
+
+#forgetPass{
+	font-size:15px;
+}

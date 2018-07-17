@@ -1,0 +1,37 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+trbut{
+	display: block;
+	background-color: rgba(159,186,221,0.30);
+	border:1px solid rgba(255,255,255,1.00);
+	border-radius: 10px;
+	backdrop-filter: blur(15px);
+	height: 150px;
+	box-shadow: 0px 0px 20px rgba(0,0,10,0.3) inset;
+	cursor: pointer;
+	transition: box-shadow 1s ease;
+	margin-top: 25px;
+}
+
+trbut:hover{
+	box-shadow: 0px 0px 20px rgba(255,255,255,0.5) inset;
+}
+
+trbut .containt{
+	margin: auto;
+	position: relative;
+	top:50%;
+	left:50%;
+	transform: translate(-50%,-50%);
+	text-align: center;	
+	font-size: 200%;
+	color:dodgerblue;
+	font-weight: 500;
+	font-family: 微软雅黑;
+}
+
+trbut .containt img{
+	width: 70%;
+	height :70%;
+}

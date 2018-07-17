@@ -1,0 +1,18 @@
+@charset "utf-8";
+/* CSS Document */
+
+.main{
+	margin-top: 200px;
+}
+
+.title{
+	font-weight: 800;
+	padding: 20px 0;
+	font-size: 55px;
+}
+
+.contain{
+	padding: 15px 0;
+	font-size:25px;
+	font-weight: 400;
+}

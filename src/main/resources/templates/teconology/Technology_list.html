@@ -1,0 +1,74 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title th:text="'YURITechnology-'+${item.name}"></title>
+<link type="text/css" href="/css/bootstrap.css" rel="stylesheet"/>
+<link type="text/css" href="/css/bootstrap-theme.css" rel="stylesheet"/>
+<link type="text/css" href="/css/mainStyle.css" rel="stylesheet"/>
+<link type="text/css" href="/css/teconologylist.css" rel="stylesheet"/>
+	<link type="text/css" href="/css/trbut.css" rel="stylesheet"/>
+<script src="/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/jump.js"></script>
+	<script type="text/javascript" src="/js/trbut.js"></script>
+	<script type="text/javascript" src="/js/teconologylist.js"></script>
+</head>
+
+<body nowurl="technology">
+<div class="indexhead">
+	<a href="/technology"><img src="/img/technology_logo.png" /></a>
+	<img class="hidden-sm hidden-xs" th:attr="src=${item.img}"/>
+</div>
+<div class="container">
+
+
+	<div class="main row">
+
+		<div th:if="${articleList.size()}==0"  class="zanwu">
+			暂无文章
+		</div>
+
+		<div class="list" th:if="${articleList.size()}!=0" 	th:each="article : ${articleList}" th:onclick="'location.href = \''+${item.name}+'/'+ ${article.Id}+'\';'">
+			<div class="col-lg-2 col-md-2 hidden-sm hidden-xs"><div class="hotcude" th:style="'background-color:rgba('+${article.getHotCubeColor()}+',1.00);'">	</div></div>
+			<div class="col-lg-10 col-md-10 col-sm-12 col-xs-12">
+			<div class="contain">
+				<div class="title hidden-md hidden-sm hidden-xs" th:text="${#strings.abbreviate(article.title,35)}">这是标题</div>
+				<div class="title hidden-lg hidden-sm hidden-xs" th:text="${#strings.abbreviate(article.title,25)}">这是标题</div>
+				<div class="title hidden-md hidden-lg hidden-xs" th:text="${#strings.abbreviate(article.title,20)}">这是标题</div>
+				<div class="title hidden-md hidden-sm hidden-lg" th:text="${#strings.abbreviate(article.title,15)}">这是标题</div>
+				<div class="row fulan">
+					<div class="author col-lg-3 col-md-3 col-sm-6 col-xs-6 text-left" th:text="'作者:'+${article.author}">这是作者</div>
+					<div class="visitnum col-lg-3 col-md-3 hidden-sm hidden-xs text-center" th:text="'点击量:'+${article.visitnum}">这是点击量</div>
+					<div class="date col-lg-6 col-md-6 col-sm-6 col-xs-6 text-right" th:text="${#dates.format(article.date,'yyyy-MM-dd HH:mm:ss')}">这是时间</div>
+				</div>
+				<div class="row biaoqian">
+					<div class="hidden-xs" th:if="${article.taps.length}==0">本文章没有添加标签</div>
+					<div class="hidden-xs" th:if="${article.taps.length}!=0">标签:<div class="Tap" th:each="tap : ${article.taps}"><div th:text="${tap}">标签1</div></div></div>
+				</div>
+			</div>
+			</div>
+		</div>
+
+
+	</div>
+
+	<div class="fenye" th:if="${articleList.size()}!=0">
+	<ul class="pagination">
+		<li class="previous" th:if="${page}!=1"><a href="?page=1">第一页</a></li>
+		<li th:class="${page}==1?'disabled':''"><a th:href="${page}==1?'javascript:void(0);':	'?page='+${page-1}" href="#">&laquo;</a></li>
+		<li th:each="i:${#numbers.sequence(index[0], index[1])}" th:class="${page}==${i}?'active':''"><a href="#" th:href="${page}==${i}?'javascript:void(0);':'?page='+${i}" th:text="${i}">1</a></li>
+		<li th:class="${page}==${sum}?'disabled':''"><a th:href="${page}==${sum}?'javascript:void(0);':'?page='+${page+1}" href="#">&raquo;</a></li>
+		<li class="previous" th:if="${page}!=${sum}"><a th:href="'?page='+${sum}" href="#">最后一页</a></li>
+	</ul>
+	</div>
+
+</div>
+
+<footer>
+	<div>本网站为YuriHead的个人网站YuriStudio™</div>
+	<div>备案号:尚未备案</div>
+	<div>联系站长:ylzz1997@qq.com</div>
+</footer>
+</body>
+</html>

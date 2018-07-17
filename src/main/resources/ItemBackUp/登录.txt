@@ -1,0 +1,49 @@
+<div style="font-weight: 600;">
+	<div class="fastlogin" style="margin:0 25px ;">
+		<form action="/userlogin" method="post">
+			<div class="form-group"><div>用户名:</div><div><input class="form-control" type="text" name="username"/></div></div>
+			<div class="form-group" style="padding:15px 0;"><div>密&nbsp;&nbsp;&nbsp;码:</div><div><input class="form-control col-lg-8 col-md-8" type="password" name="password"/></div></div>
+			<div class="form-group"><div style="margin-top:90px;"><button id="btn_fastlogin_submit" type="button" class="btn btn-defaults" style="color: #000;width: 100%;">提交</button></div></div>
+		</form>
+	</div>
+
+	<div class="userimformation" style="margin:0 25px; display: none; font-size:19px;">
+		<div class="row text-center"><div style="margin:10px auto;width: 70px; height: 70px;border-radius:50px;border:1px solid #ffffff;overflow:hidden;">
+			<div class="face"><img style="width: 100%"/></div>
+		</div></div>
+		<div class="row text-center">欢迎回来!<span id="username"></span></div>
+		<div class="row text-center">昵称:<span id="indexname"></span></div>
+		<div class="row text-center">
+		    <div><a>个人中心</a>|<a href="/userlogout">注销</a></div>
+		</div>
+	</div>
+</div>
+
+<script>
+       $.get("/getlogStatus",function (date){
+           if(date.status==0){
+               $(".userimformation").css("display","none");
+               $(".fastlogin").css("display","block");
+           }else {
+               $(".userimformation").css("display","block");
+               $(".fastlogin").css("display","none");
+               $(".face img").attr("src",date.user.faceimg);
+               $(".userimformation #username").text(date.user.username);
+               $(".userimformation #indexname").text(date.user.indexname);
+           }
+       });
+
+       $("#btn_fastlogin_submit").click(function () {
+           if($("input[name='username']").val()==""){
+               alert("用户名不能为空!");
+               return;
+           }
+           if($("input[name='password']").val()==""){
+               alert("密码不能为空!");
+               return;
+           }
+
+           $(".fastlogin form").submit();
+       });
+</script>
+

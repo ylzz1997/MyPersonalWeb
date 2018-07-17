@@ -1,0 +1,61 @@
+﻿@charset "utf-8";
+/* CSS Document */
+
+.buttonGroup{
+	margin: 35px 0;
+}
+
+.indexhead{
+	height: 200px;
+	background-color: rgba(77,78,90,0.80);
+}
+
+.indexhead img{
+	height: 100%;
+	margin: 0px 70px;
+}
+
+.neimain{
+	margin-top: 50px;
+	background-color: rgba(77,78,90,0.2);
+	backdrop-filter: blur(15px);
+}
+
+.flowItem{
+	height: 400px;
+	box-shadow: 0px 0px 20px rgba(25,25,25,0.7);
+	background-color: rgba(18,43,64,0.7);
+	margin: 20px 0px;
+	color: white;
+	overflow:hidden;
+}
+
+.flowItem .title{
+	font-size: 25px;
+	font-weight: 800;
+	padding: 20px 0;
+	text-align: center;
+	width:100%;
+}
+
+.flowItem .contain{
+	width:100%;
+	margin-top:15px;
+}
+
+ul a{
+	color: #ffffff;
+}
+
+ul a:hover{
+	color: #AFAFFF;
+}
+
+ul li{
+	margin:10px 0;
+}
+
+ul{
+	margin:0px;
+	padding:0px;
+}

@@ -1,0 +1,66 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.indexhead{
+	height: 200px;
+	background-color: rgba(77,78,90,0.80);
+}
+
+.indexhead img{
+	height: 100%;
+	margin: 0px 70px;
+}
+
+.main{
+	margin-top: 45px;
+	background-color: rgba(77,78,90,0.2);
+	backdrop-filter: blur(15px);
+	padding: 20px;
+}
+
+.head{
+	padding:15px ;
+	border-bottom: 1px solid white;
+}
+
+.nowPosition{
+	color: #444444;
+}
+
+.title{
+	text-align: center;
+	font-size:28px;
+	font-weight:600;
+}
+
+.information{
+	color:#444444;
+
+}
+
+.biaoqian{
+	margin: 15px 0 3px 0;
+	vertical-align: middle;
+}
+
+.biaoqian .Tap{
+	display: inline-block;
+	height: 25px;
+	width: auto;
+	text-align: center;
+	margin:0px 10px;
+	vertical-align: middle;
+	background-color: white;
+	color:#204d74;
+	box-shadow: 0px 0px 10px rgba(255,255,255,0.7);
+}
+
+.Tap div{
+	margin:3px 0;
+	padding: 0px 7px;
+}
+
+.content{
+	padding: 25px 0px;
+	width: 93%;
+	margin: 0 auto;
+}

@@ -1,0 +1,90 @@
+﻿@charset "utf-8";
+/* CSS Document */
+.indexhead{
+	height: 200px;
+	background-color: rgba(77,78,90,0.80);
+}
+
+.indexhead img{
+	height: 100%;
+	margin: 0px 70px;
+}
+
+.main{
+	margin-top: 45px;
+	background-color: rgba(77,78,90,0.2);
+	backdrop-filter: blur(15px);
+	padding: 20px;
+}
+
+.list{
+	height: 100px;
+	width: 100%;
+	box-shadow: 0px 0px 20px rgba(25,25,25,0.7);
+	background-color: rgba(18,43,64,0.7);
+	margin:15px 0;
+	color: white;
+	overflow:hidden;
+	transition:all 0.3s ease;
+	cursor: pointer;
+}
+
+.list:hover{
+	box-shadow: 0px 0px 20px rgba(255,255,25,0.7);
+	transform:scale(1.05,1.05);
+}
+
+.hotcude{
+	margin:15px;
+	height: 70px;
+	width: 70px;
+	background-color: white;
+}
+
+.contain{
+	height: 100%;
+}
+
+.contain .title{
+	margin: 5px 0 3px 0;
+	font-size:22px;
+	font-weight: 600;
+}
+
+.fulan{
+	color: #cccccc;;
+}
+
+.contain .biaoqian{
+	margin: 7px 0 3px 0;
+	vertical-align: middle;
+}
+
+.biaoqian .Tap{
+	display: inline-block;
+	height: 25px;
+	width: auto;
+	text-align: center;
+	margin:0px 10px;
+	vertical-align: middle;
+	background-color: #cccccc;
+	color:#204d74;
+	box-shadow: 0px 0px 10px rgba(255,255,255,0.7);
+}
+
+.Tap div{
+	margin:3px 0;
+	padding: 0px 7px;
+}
+
+.fenye{
+	text-align: center;
+}
+
+.zanwu{
+	padding: 100px 0;
+	font-size:50px;
+	font-weight: 800;
+	text-align: center;
+	width: 100%;
+}

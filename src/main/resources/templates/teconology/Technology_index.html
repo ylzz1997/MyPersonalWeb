@@ -1,0 +1,54 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title>YURITechnology</title>
+<link type="text/css" href="/css/bootstrap.css" rel="stylesheet"/>
+<link type="text/css" href="/css/bootstrap-theme.css" rel="stylesheet"/>
+<link type="text/css" href="/css/mainStyle.css" rel="stylesheet"/>
+<link type="text/css" href="/css/teconology.css" rel="stylesheet"/>
+	<link type="text/css" href="/css/trbut.css" rel="stylesheet"/>
+<script src="/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+<script type="text/javascript" src="/js/bootstrap.js"></script>
+<script type="text/javascript" src="/js/jump.js"></script>
+	<script type="text/javascript" src="/js/trbut.js"></script>
+	<script type="text/javascript" src="/js/teconology.js"></script>
+</head>
+
+<body nowurl="technology">
+<div class="indexhead">
+	<a href="/technology"><img src="/img/technology_logo.png" /></a>
+</div>
+<div class="container">
+	
+	<div class="buttonGroup row">
+		<div class="col-lg-3 col-md-4 col-sm-6 col-xs-12" th:each="m : ${itemList}">
+			<trbut th:attr="data_name=${m.name},data_img=${m.ico}">
+				<div class="containt">
+				</div>
+			</trbut>
+		</div>
+	</div>
+
+	<div class="neimain row">
+		<each th:each="col : ${colList}">
+		<div class="col-lg-4 col-md-4 col-sm-12 col-xs-12" th:if="${col.isEnable()} == true">
+			<div class="flowItem">
+				<div class="title" th:text="${col.title}"></div>
+				<div class="contain" th:utext="${col.contain}">
+				</div>
+			</div>
+		</div>
+		</each>
+	</div>
+
+</div>
+
+
+	<footer>
+<div>本网站为YuriHead的个人网站YuriStudio™</div>
+	<div>备案号:尚未备案</div>
+	<div>联系站长:ylzz1997@qq.com</div>
+</footer>
+</body>
+</html>

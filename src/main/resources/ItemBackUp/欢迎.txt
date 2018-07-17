@@ -1,0 +1,28 @@
+<div style="margin: 0 25px;">
+<div style="font-size: 25px; font-weight: 300;margin: 20px 0;">
+	欢迎来到YURI Technology!
+</div>
+<div style="font-size: 20px;margin: 25px;">
+	今日访客:<span id="dailyUv" style="color:#FFFFCC;">${今日访客}</span>
+</div>
+<div style="font-size: 20px;margin: 25px;">
+	全部访客:<span id="sumUv" style="color:#FFFFCC;">${全部访客}</span>
+</div>
+	<div style="font-size: 20px;margin: 25px;">
+		今日点击:<span id="dailyPv" style="color:#FFFFCC;">${今日点击}</span>
+	</div>
+	<div style="font-size: 20px;margin: 25px;">
+		全部点击:<span id="sumPv" style="color:#FFFFCC;">${全部点击}</span>
+	</div>
+</div>
+
+ <script type="text/javascript">
+	 $(function () {
+                        $.get("/guestStatistic/PvUv",function (date) {
+			 $("#dailyUv").text(date.dailyUv);
+                            $("#dailyPv").text(date.dailyPv);
+                            $("#sumUv").text(date.sumUv);
+                            $("#sumPv").text(date.sumPv);
+                        });
+                    })
+ </script>

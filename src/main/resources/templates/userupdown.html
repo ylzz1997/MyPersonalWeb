@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>登录or注册</title>
+    <link type="text/css" href="/css/bootstrap.css" rel="stylesheet"/>
+    <link type="text/css" href="/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link type="text/css" href="/css/mainStyle.css" rel="stylesheet"/>
+    <link type="text/css" href="/css/loginorregist.css" rel="stylesheet"/>
+    <script src="/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/loginorregist.js"></script>
+</head>
+<body>
+<div class="container">
+    <div class="main">
+        <div class="row">
+            <div class="well col-lg-6 col-md-6 col-md-offset-3 col-lg-offset-3">
+                <div class="title text-center"><span class="model">登录</span></div>
+                <div class="contain">
+                    <form class="form-horizontal" action="/userlogin" method="post">
+                        <div class="text-danger" id="imformation">本界面会根据输入姓名是否存在自动转换注册登录模式</div>
+                        <div class="form-group" id="username"><label class="col-lg-3 col-md-3 control-label">用户名:</label><div class="col-lg-9 col-md-9"><input class="form-control" type="text" name="username"/></div></div>
+                        <div class="form-group" id="password"><label class="col-lg-3 col-md-3 control-label">密&nbsp;&nbsp;&nbsp;&nbsp;码:</label><div class="col-lg-9 col-md-9"><input class="form-control" type="password" name="password"/></div></div>
+                        <div class="form-group" id="repass" style="display:none"><label class="col-lg-3 col-md-3 control-label">确认密码:</label><div class="col-lg-9 col-md-9"><input class="form-control" type="password" name="repass"/></div></div>
+                        <div class="form-group" id="email" style="display:none"><label class="col-lg-3 col-md-3 control-label">电子邮件:</label><div class="col-lg-9 col-md-9"><input class="form-control" type="email" name="email"/></div></div>
+                        <div class="text-center" id="forgetPass"><a href="/forgetpassword">忘记密码</a></div>
+                        <div class="form-group text-center"><button type="button" id="sub" class="btn btn-primary">登录</button></div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+</body>
+</html>

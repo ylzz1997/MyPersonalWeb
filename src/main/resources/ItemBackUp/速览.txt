@@ -1,0 +1,39 @@
+<div style="width: 100%; " class="YHLunbo"><a><img style="width: 100%;" src="img/logo.png" /></a></div>
+					<script>
+                        var lunbo_date = [];
+                        var lunbo_lenth = lunbo_date.length;
+                        var lunbo_i = 1;
+
+                        $(function () {
+                            $.get("/sliderJson",function (date) {
+
+                                lunbo_date=$.parseJSON(date);
+                                lunbo_lenth = lunbo_date.length;
+								lunbo_i = 1;
+                                if(lunbo_lenth!=0){
+                                    if(lunbo_date[0].href!=""){
+                                        $(".YHLunbo a").attr("href",lunbo_date[0].href);
+                                    }
+                                    $(".YHLunbo a img").attr("src",lunbo_date[0].src);
+                                }else{
+                                    $(".YHLunbo a img").attr("src","img/logo.png");
+                                }
+                                setInterval("lunbo_loop()",4000);
+                            });
+                        });
+
+                        function lunbo_loop() {
+                            $(".YHLunbo").animate({opacity:"0"},"fast",function () {
+                                if(lunbo_i>=lunbo_lenth)
+                                    lunbo_i =0;
+                                if(lunbo_date[lunbo_i].href!=""){
+                                    $(".YHLunbo a").attr("href",lunbo_date[0].href);
+                                }else {
+                                    $(".YHLunbo a").removeAttr("href");
+                                }
+                                $(".YHLunbo a img").attr("src",lunbo_date[lunbo_i].src);
+                                lunbo_i++;
+                                $(".YHLunbo").animate({opacity:"1"},"fast");
+                            });
+                        }
+					</script>
