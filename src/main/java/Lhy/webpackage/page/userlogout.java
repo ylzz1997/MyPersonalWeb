@@ -23,8 +23,9 @@ public class userlogout {
         session.removeAttribute("user");
         model.addAttribute("notice","注销成功");
         model.addAttribute("contence","已注销成功，点击按钮回到首页!");
-        model.addAttribute("atext","回到首页");
-        model.addAttribute("href","/");
+        model.addAttribute("atext","回到上一页");
+        model.addAttribute("href","javascript:void(0)");
+        model.addAttribute("onclick","history.back(-1)");
         return "userReturn.html";
     }
 }

@@ -14,7 +14,7 @@
 		<div class="row text-center">欢迎回来!<span id="username"></span></div>
 		<div class="row text-center">昵称:<span id="indexname"></span></div>
 		<div class="row text-center">
-		    <div><a>个人中心</a>|<a href="/userlogout">注销</a></div>
+		    <div><a href="/usercenter">个人中心</a>|<a href="/userlogout">注销</a></div>
 		</div>
 	</div>
 </div>

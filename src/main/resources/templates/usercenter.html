@@ -1,0 +1,33 @@
+<!doctype html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8">
+<title th:text="'用户中心-'+${user.username}">用户中心</title>
+    <link type="text/css" href="/css/bootstrap.css" rel="stylesheet"/>
+    <link type="text/css" href="/css/bootstrap-theme.css" rel="stylesheet"/>
+    <link type="text/css" href="/css/mainStyle.css" rel="stylesheet"/>
+    <link type="text/css" href="/css/usercenter.css" rel="stylesheet"/>
+    <script src="/js/jquery-3.2.1.min.js" type="text/javascript"></script>
+    <script type="text/javascript" src="/js/bootstrap.js"></script>
+</head>
+
+<body>
+<div class="indexhead">
+    <a href="/"><img src="/img/logo.png" /></a>
+</div>
+
+<div class="container">
+    <div class="neimain row">
+        <div class="container">
+            <div>用户名:<span th:text="${user.username}"></span></div>
+        </div>
+    </div>
+</div>
+
+<footer>
+    <div>本网站为YuriHead的个人网站YuriStudio™</div>
+    <div>备案号:尚未备案</div>
+    <div>联系站长:ylzz1997@qq.com</div>
+</footer>
+</body>
+</html>
