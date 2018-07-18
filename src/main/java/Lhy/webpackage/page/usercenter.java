@@ -22,6 +22,7 @@ public class usercenter {
             model.addAttribute("href","/userupdown");
             return "userReturn.html";
         }
+        model.addAttribute("user",user);
         return "usercenter.html";
     }
 }

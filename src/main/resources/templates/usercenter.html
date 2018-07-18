@@ -9,6 +9,7 @@
     <link type="text/css" href="/css/usercenter.css" rel="stylesheet"/>
     <script src="/js/jquery-3.2.1.min.js" type="text/javascript"></script>
     <script type="text/javascript" src="/js/bootstrap.js"></script>
+    <script type="text/javascript" src="/js/usercenter.js"></script>
 </head>
 
 <body>
@@ -18,8 +19,17 @@
 
 <div class="container">
     <div class="neimain row">
-        <div class="container">
+        <div class="neirong">
             <div>用户名:<span th:text="${user.username}"></span></div>
+            <div class="row"><div class="col-lg-1 col-md-2 col-sm-3 col-xs-3">密码:</div><div class="col-lg-4 col-md-4 col-sm-8 col-xs-8"><input type="password"  class="form-control" name = "password"/></div></div>
+            <div class="row" id="password_gai" style="display: none">
+                <div class="row"><div class="col-lg-2 col-md-3 col-sm-3 col-xs-3">确认密码:</div><div class="col-lg-4 col-md-4 col-sm-8 col-xs-8"><input type="password"  class="form-control" name = "repass"/></div></div>
+                <div class="row"><button id="btn_password" type="button" class="btn btn-primary">修改</button></div>
+            </div>
+            <div class="text-danger">如果密码为不修改，请不要填写密码！</div>
+            <div>电子邮件:<span th:text="${user.email}"></span><button id="btn_email" type="button" class="btn btn-primary">修改</button></div>
+            <div>昵称:<span th:text="${user.indexname}"></span><button id="btn_indexname" type="button" class="btn btn-primary">修改</button></div>
+            <div>头像:<span>&nbsp;</span><img class="face" th:src="${user.faceimg}" /><button id="btn_face" type="button" class="btn btn-primary">修改</button></div>
         </div>
     </div>
 </div>

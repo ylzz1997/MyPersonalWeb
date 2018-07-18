@@ -3,7 +3,8 @@
 		<form action="/userlogin" method="post">
 			<div class="form-group"><div>用户名:</div><div><input class="form-control" type="text" name="username"/></div></div>
 			<div class="form-group" style="padding:15px 0;"><div>密&nbsp;&nbsp;&nbsp;码:</div><div><input class="form-control col-lg-8 col-md-8" type="password" name="password"/></div></div>
-			<div class="form-group"><div style="margin-top:90px;"><button id="btn_fastlogin_submit" type="button" class="btn btn-defaults" style="color: #000;width: 100%;">提交</button></div></div>
+			 <div class="form-group text-center" style="padding:15px 0;"><a href="/userupdown">没用账号?点击注册</a></div>
+			<div class="form-group"><div style="margin-top:65px;"><button id="btn_fastlogin_submit" type="button" class="btn btn-defaults" style="color: #000;width: 100%;">提交</button></div></div>
 		</form>
 	</div>
 

@@ -4,11 +4,12 @@
 .indexhead{
 	height: 200px;
 	background-color: rgba(77,78,90,0.80);
+	text-align: center;
 }
 
 .indexhead img{
 	height: 100%;
-	width:50%;
+	width:40%;
 	margin: 0px auto;
 }
 
@@ -16,4 +17,29 @@
 	margin-top: 50px;
 	background-color: rgba(77,78,90,0.2);
 	backdrop-filter: blur(15px);
+}
+
+.neirong{
+	margin:25px auto;
+	width:95%;
+	font-size:25px;
+}
+
+.face{
+	height: 100px;
+	width: 100px;
+}
+
+button
+{
+	margin:0 15px;
+}
+
+.neirong div{
+	margin-top:15px;
+}
+
+#password_gai{
+	margin-left: 0px;
+	margin-top:0px;
 }
