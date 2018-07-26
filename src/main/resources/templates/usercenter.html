@@ -32,13 +32,13 @@
                     <div class="row"><div class="col-lg-4 col-md-4 col-sm-8 col-xs-8"><input type="email"  class="form-control" name = "email"/></div></div>
                     <button id="btn_email_close" type="button" class="btn btn-danger">关闭</button></div>
                 </div>
-                <button id="btn_email" type="button" class="btn btn-primary">修改</button></div>
+                <button id="btn_email" type="button" class="btn btn-primary" btn_status="0">修改</button></div>
             <div>昵称:<span th:text="${user.indexname}"></span>
                 <div class="row" id="indexname_gai" style="display: none">
                     <div class="row"><div class="col-lg-4 col-md-4 col-sm-8 col-xs-8"><input type="email"  class="form-control" name = "email"/></div></div>
                     <button id="btn_indexname_close" type="button" class="btn btn-danger">关闭</button></div>
                 </div>
-                <button id="btn_indexname" type="button" class="btn btn-primary">修改</button></div>
+                <button id="btn_indexname" type="button" class="btn btn-primary"  btn_status="0">修改</button></div>
             <div>头像:<span>&nbsp;</span><img class="face" th:src="${user.faceimg}" /><button id="btn_face" type="button" class="btn btn-primary">修改</button></div>
         </div>
     </div>

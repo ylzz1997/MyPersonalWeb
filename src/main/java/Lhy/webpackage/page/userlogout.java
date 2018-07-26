@@ -26,6 +26,6 @@ public class userlogout {
         model.addAttribute("atext","回到上一页");
         model.addAttribute("href","javascript:void(0)");
         model.addAttribute("onclick","history.back(-1)");
-        return "userReturn.html";
+        return "userRk;eturn.html";
     }
 }
