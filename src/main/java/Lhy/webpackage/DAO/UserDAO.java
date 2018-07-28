@@ -21,15 +21,15 @@ public interface UserDAO extends CrudRepository<User,Integer> {
     @Transactional
     @Modifying
     @Query(value = "update User u set u.password = ?1 where u.id = ?2")
-    User UpdateUserPassword(String password,int id);
+    int UpdateUserPassword(String password,int id);
 
     @Transactional
     @Modifying
     @Query(value = "update User u set u.email = ?1 where u.id = ?2")
-    User UpdateUserEmail(String email,int id);
+    int UpdateUserEmail(String email,int id);
 
     @Transactional
     @Modifying
     @Query(value = "update User u set u.indexname = ?1 where u.id = ?2")
-    User UpdateUserIndexname(String indexname,int id);
+    int UpdateUserIndexname(String indexname,int id);
 }

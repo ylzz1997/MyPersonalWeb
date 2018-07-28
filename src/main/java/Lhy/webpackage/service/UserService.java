@@ -24,4 +24,28 @@ public class UserService {
     public User saveUser(User user){
         return userDAO.save(user);
     }
+
+    public boolean updateUserPassword(User user){
+        if(userDAO.UpdateUserPassword(user.getPassword(),user.getId())!=0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean updateUserEmail(User user){
+        if(userDAO.UpdateUserEmail(user.getEmail(),user.getId())!=0){
+            return true;
+        }else {
+            return false;
+        }
+    }
+
+    public boolean updateUserIndexname(User user){
+        if(userDAO.UpdateUserIndexname(user.getIndexname(),user.getId())!=0){
+            return true;
+        }else {
+            return false;
+        }
+    }
 }
