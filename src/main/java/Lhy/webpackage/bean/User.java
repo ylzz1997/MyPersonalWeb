@@ -85,7 +85,7 @@ public class User{
         this.faceimg = faceimg;
     }
 
-    public boolean isBan() {
+    public boolean getBan() {
         return ban;
     }
 
