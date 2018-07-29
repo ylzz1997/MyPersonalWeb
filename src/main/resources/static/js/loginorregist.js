@@ -16,7 +16,7 @@ $(function(){
             return;
         }else {
             if(!reg_name.test($("input[name='username']").val())){
-                $("#imformation").text("账号不能含有特殊字符,只能含有数字字母下划线，长度为0-10字符!");
+                $("#imformation").text("账号不能含有特殊字符,只能含有数字字母下划线，长度为3-10字符!");
                 $("#username").addClass("has-error");
                 return;
             }

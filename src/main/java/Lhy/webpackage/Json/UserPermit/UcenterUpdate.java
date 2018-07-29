@@ -1,5 +1,6 @@
 package Lhy.webpackage.Json.UserPermit;
 
+import Lhy.webpackage.POJO.HashUtil;
 import Lhy.webpackage.bean.User;
 import Lhy.webpackage.service.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -20,13 +21,15 @@ import java.util.Map;
 public class UcenterUpdate {
     @Autowired
     private UserService userService;
+    @Autowired
+    private HashUtil hashUtil;
 
     @RequestMapping(name = "/password",method = RequestMethod.POST)
     public Map updatePassword(@RequestParam("password")String password, HttpSession session){
         Map res = new HashMap<String,String>();
         User user = new User();
         user.setId(((User)session.getAttribute("user")).getId());
-        user.setPassword(password);
+        user.setPassword(hashUtil.getMD5(password));
        if(userService.updateUserPassword(user)){
             res.put("reason","1");
        }else {
@@ -34,4 +37,6 @@ public class UcenterUpdate {
        }
        return res;
     }
+
+
 }
