@@ -1,7 +1,7 @@
 package Lhy.webpackage.Json.GuestPermit;
 
 import Lhy.webpackage.bean.User;
-import Lhy.webpackage.service.UserService;
+import Lhy.webpackage.service.index.service_only.UserService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;

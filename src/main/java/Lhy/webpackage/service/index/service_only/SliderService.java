@@ -1,4 +1,4 @@
-package Lhy.webpackage.service;
+package Lhy.webpackage.service.index.service_only;
 
 import org.springframework.core.io.ClassPathResource;
 import org.springframework.core.io.Resource;

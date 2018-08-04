@@ -1,7 +1,8 @@
-package Lhy.webpackage.service;
+package Lhy.webpackage.service.tecnology.service_only;
 
 import Lhy.webpackage.DAO.TCItemDAO;
 import Lhy.webpackage.bean.TCItem;
+import Lhy.webpackage.service.interfaces.ItemService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
@@ -12,7 +13,7 @@ import java.util.List;
  * Created by lhy on 2018/6/25.
  */
 @Service
-public class TCItemService implements ItemService{
+public class TCItemService implements ItemService {
     @Autowired
     private TCItemDAO dao;
 

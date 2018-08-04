@@ -1,8 +1,7 @@
-package Lhy.webpackage.service;
+package Lhy.webpackage.service.tecnology.handle;
 
-import Lhy.webpackage.bean.Item;
-import Lhy.webpackage.bean.TCItem;
 import Lhy.webpackage.bean.TCcol;
+import Lhy.webpackage.service.tecnology.render.TCItemRender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

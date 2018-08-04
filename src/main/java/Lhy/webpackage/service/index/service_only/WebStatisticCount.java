@@ -1,12 +1,10 @@
-package Lhy.webpackage.service;
+package Lhy.webpackage.service.index.service_only;
 
-import Lhy.webpackage.bean.TCItem;
 import Lhy.webpackage.bean.pv;
 import Lhy.webpackage.bean.uv;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 
-import java.util.ArrayList;
 import java.util.Date;
 import java.util.List;
 

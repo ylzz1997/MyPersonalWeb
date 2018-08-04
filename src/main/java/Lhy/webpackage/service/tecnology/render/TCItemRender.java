@@ -1,6 +1,8 @@
-package Lhy.webpackage.service;
+package Lhy.webpackage.service.tecnology.render;
 
 import Lhy.webpackage.bean.Item;
+import Lhy.webpackage.service.strategy.ArticleItemContext;
+import Lhy.webpackage.service.interfaces.ItemRender;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 

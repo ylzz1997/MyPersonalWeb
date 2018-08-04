@@ -1,7 +1,8 @@
-package Lhy.webpackage.service;
+package Lhy.webpackage.service.strategy;
 
 import Lhy.webpackage.bean.Article;
 import Lhy.webpackage.bean.Item;
+import Lhy.webpackage.service.tecnology.service_only.ArticleService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Service;
 import org.thymeleaf.util.StringUtils;

@@ -1,6 +1,6 @@
 package Lhy.webpackage.Json.GuestPermit;
 
-import Lhy.webpackage.service.WebStatisticCount;
+import Lhy.webpackage.service.index.service_only.WebStatisticCount;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.web.bind.annotation.RequestMapping;

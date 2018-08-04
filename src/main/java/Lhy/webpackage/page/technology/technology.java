@@ -1,23 +1,20 @@
 package Lhy.webpackage.page.technology;
 
-import Lhy.webpackage.DAO.TCItemDAO;
 import Lhy.webpackage.bean.Article;
 import Lhy.webpackage.bean.TCItem;
 import Lhy.webpackage.bean.TCcol;
-import Lhy.webpackage.service.ArticleService;
-import Lhy.webpackage.service.ItemService;
-import Lhy.webpackage.service.TCItemHandle;
-import Lhy.webpackage.service.TCcolService;
+import Lhy.webpackage.service.tecnology.service_only.ArticleService;
+import Lhy.webpackage.service.interfaces.ItemService;
+import Lhy.webpackage.service.tecnology.handle.TCItemHandle;
+import Lhy.webpackage.service.tecnology.service_only.TCcolService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
-import org.springframework.stereotype.Service;
 import org.springframework.ui.Model;
 import org.springframework.web.bind.annotation.PathVariable;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestParam;
 
 import javax.annotation.Resource;
-import javax.websocket.server.PathParam;
 import java.util.List;
 
 /**

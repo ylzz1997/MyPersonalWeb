@@ -1,14 +1,12 @@
 package Lhy.webpackage.listener;
 
-import Lhy.webpackage.bean.pv;
 import Lhy.webpackage.bean.uv;
 import org.springframework.beans.factory.annotation.Autowired;
 
 import javax.servlet.annotation.WebListener;
 import javax.servlet.http.HttpSessionEvent;
 import javax.servlet.http.HttpSessionListener;
-import Lhy.webpackage.service.uvService;
-import org.springframework.stereotype.Component;
+import Lhy.webpackage.service.index.service_only.uvService;
 
 import java.util.Date;
 

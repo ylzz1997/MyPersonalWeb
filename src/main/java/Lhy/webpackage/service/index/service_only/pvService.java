@@ -1,4 +1,4 @@
-package Lhy.webpackage.service;
+package Lhy.webpackage.service.index.service_only;
 
 import Lhy.webpackage.DAO.pvDAO;
 import Lhy.webpackage.bean.TCItem;

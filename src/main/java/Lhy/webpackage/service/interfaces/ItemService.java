@@ -1,4 +1,4 @@
-package Lhy.webpackage.service;
+package Lhy.webpackage.service.interfaces;
 
 import Lhy.webpackage.bean.TCItem;
 

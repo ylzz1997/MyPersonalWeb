@@ -1,4 +1,4 @@
-package Lhy.webpackage.service;
+package Lhy.webpackage.service.tecnology.service_only;
 
 import Lhy.webpackage.DAO.ArticleDAO;
 import Lhy.webpackage.bean.Article;

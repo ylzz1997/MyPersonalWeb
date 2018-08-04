@@ -2,7 +2,7 @@ package Lhy.webpackage.AOP;
 
 import Lhy.webpackage.POJO.IPUtil;
 import Lhy.webpackage.bean.Guest;
-import Lhy.webpackage.service.GuestStatisticService;
+import Lhy.webpackage.service.index.service_only.GuestStatisticService;
 import org.aspectj.lang.JoinPoint;
 import org.aspectj.lang.annotation.Aspect;
 import org.aspectj.lang.annotation.Before;

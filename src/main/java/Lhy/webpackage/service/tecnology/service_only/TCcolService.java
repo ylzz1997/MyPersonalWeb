@@ -1,4 +1,4 @@
-package Lhy.webpackage.service;
+package Lhy.webpackage.service.tecnology.service_only;
 
 import Lhy.webpackage.DAO.TCcolDAO;
 import Lhy.webpackage.bean.TCcol;
