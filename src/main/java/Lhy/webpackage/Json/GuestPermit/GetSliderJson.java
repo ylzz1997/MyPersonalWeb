@@ -3,6 +3,7 @@ package Lhy.webpackage.Json.GuestPermit;
 import Lhy.webpackage.service.index.service_only.SliderService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.RequestMapping;
+import org.springframework.web.bind.annotation.ResponseBody;
 import org.springframework.web.bind.annotation.RestController;
 
 
@@ -14,7 +15,7 @@ public class GetSliderJson {
     @Autowired
     SliderService sliderService;
 
-    @RequestMapping(value = "/sliderJson",produces = "application/json,charset=utf-8")
+    @RequestMapping(value = "/sliderJson")
     public String sliderJson(){
         return sliderService.getSliderJson();
     }
