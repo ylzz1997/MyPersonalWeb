@@ -51,6 +51,14 @@ $(function(){
                 return;
             }
         }
+
+        $.post("/UcenterUpdate/email",{email:$("input[name='email']").val()},function(result){
+            if(result.result==1){
+                alert("修改成功!");
+            }else{
+                alert("修改失败!");
+            }
+        });
     });
 
     $("#btn_indexname").click(function(){
@@ -73,5 +81,13 @@ $(function(){
                 return;
             }
         }
+
+        $.post("/UcenterUpdate/indexName",{indexName:$("input[name='indexname']").val()},function(result){
+            if(result.result==1){
+                alert("修改成功!");
+            }else{
+                alert("修改失败!");
+            }
+        });
     });
 });

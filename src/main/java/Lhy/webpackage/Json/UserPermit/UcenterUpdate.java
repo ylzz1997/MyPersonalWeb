@@ -38,5 +38,31 @@ public class UcenterUpdate {
        return res;
     }
 
+    @RequestMapping(name = "/indexName",method = RequestMethod.POST)
+    public Map updateIndexName(@RequestParam("indexName")String indexName, HttpSession session){
+        Map res = new HashMap<String,String>();
+        User user = new User();
+        user.setId(((User)session.getAttribute("user")).getId());
+        user.setIndexname(indexName);
+        if(userService.updateUserIndexname(user)){
+            res.put("result","1");
+        }else {
+            res.put("result","0");
+        }
+        return res;
+    }
 
+    @RequestMapping(name = "/email",method = RequestMethod.POST)
+    public Map updateEmail(@RequestParam("email")String email, HttpSession session){
+        Map res = new HashMap<String,String>();
+        User user = new User();
+        user.setId(((User)session.getAttribute("user")).getId());
+        user.setEmail(email);
+        if(userService.updateUserEmail(user)){
+            res.put("result","1");
+        }else {
+            res.put("result","0");
+        }
+        return res;
+    }
 }
