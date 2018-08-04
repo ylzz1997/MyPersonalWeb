@@ -15,7 +15,7 @@ public class GetSliderJson {
     @Autowired
     SliderService sliderService;
 
-    @RequestMapping(value = "/sliderJson")
+    @RequestMapping("/sliderJson")
     public String sliderJson(){
         return sliderService.getSliderJson();
     }
