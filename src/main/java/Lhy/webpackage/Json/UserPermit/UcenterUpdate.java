@@ -31,9 +31,9 @@ public class UcenterUpdate {
         user.setId(((User)session.getAttribute("user")).getId());
         user.setPassword(hashUtil.getMD5(password));
        if(userService.updateUserPassword(user)){
-            res.put("reason","1");
+            res.put("result","1");
        }else {
-           res.put("reason","0");
+           res.put("result","0");
        }
        return res;
     }

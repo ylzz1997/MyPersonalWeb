@@ -23,7 +23,7 @@ $(function(){
             return;
         }
         $.post("/UcenterUpdate/password",{password:$("input[name='password']").val()},function(result){
-            if(result.reason==1){
+            if(result.result==1){
                 alert("修改成功!");
             }else{
                 alert("修改失败!");
