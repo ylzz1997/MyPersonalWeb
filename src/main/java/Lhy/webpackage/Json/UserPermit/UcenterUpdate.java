@@ -24,7 +24,7 @@ public class UcenterUpdate {
     @Autowired
     private HashUtil hashUtil;
 
-    @RequestMapping(name = "/password",method = RequestMethod.POST)
+    @RequestMapping(value = "/password",method = RequestMethod.POST)
     public Map updatePassword(@RequestParam("password")String password, HttpSession session){
         Map res = new HashMap<String,String>();
         User user = new User();
@@ -38,7 +38,7 @@ public class UcenterUpdate {
        return res;
     }
 
-    @RequestMapping(name = "/indexName",method = RequestMethod.POST)
+    @RequestMapping(value = "/indexName",method = RequestMethod.POST)
     public Map updateIndexName(@RequestParam("indexName")String indexName, HttpSession session){
         Map res = new HashMap<String,String>();
         User user = new User();
@@ -52,7 +52,7 @@ public class UcenterUpdate {
         return res;
     }
 
-    @RequestMapping(name = "/email",method = RequestMethod.POST)
+    @RequestMapping(value = "/email",method = RequestMethod.POST)
     public Map updateEmail(@RequestParam("email")String email, HttpSession session){
         Map res = new HashMap<String,String>();
         User user = new User();

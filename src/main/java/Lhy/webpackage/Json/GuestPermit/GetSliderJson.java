@@ -14,7 +14,7 @@ public class GetSliderJson {
     @Autowired
     SliderService sliderService;
 
-    @RequestMapping("/sliderJson")
+    @RequestMapping(value = "/sliderJson",produces = "application/json,charset=utf-8")
     public String sliderJson(){
         return sliderService.getSliderJson();
     }
