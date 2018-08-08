@@ -34,63 +34,8 @@ public final class IPUtil {
     }
 
     public String getRequestBrowserInfo(HttpServletRequest request){
-        String browserVersion = null;
         String header = request.getHeader("user-agent");
-        if(header == null || header.equals("")){
-            return "未知内核的浏览器";
-        }
-        if(header.indexOf("baidubrowser")>0){
-            browserVersion = "百度浏览器";
-        }else if(header.indexOf("UBrowser")>0){
-            browserVersion = "UC浏览器";
-        }else if(header.indexOf("Maxthon")>0){
-            browserVersion = "Maxthon";
-        }else if(header.indexOf("MicroMessenger")>0){
-            browserVersion = "微信";
-        }else if(header.indexOf("MetaSr")>0){
-            browserVersion = "搜狗浏览器";
-        }else if(header.indexOf("masscan")>0){
-            browserVersion = "Masscan端口探测";
-        }else if(header.indexOf("WAP-Browser")>0){
-            browserVersion = "WAP浏览器(功能机)";
-        }else if(header.indexOf("python-requests")>0){
-            browserVersion = "Python爬虫/自制浏览器";
-        }else if(header.indexOf("Edge")>0){
-            browserVersion = "MicrosoftEdge";
-        }else if(header.indexOf("TaoBrowser")>0){
-            browserVersion = "淘宝客户端";
-        }else if(header.indexOf("LBBROWSER")>0){
-            browserVersion = "猎豹浏览器";
-        }else if(header.indexOf("QQ")>0 || header.indexOf("TIM")>0){
-            if(header.indexOf("MQQBrowser")>0){
-                browserVersion = "QQ内嵌的浏览器";
-            }else if(header.indexOf("QQBrowser")>0){
-                browserVersion = "QQ浏览器";
-            }else{
-                browserVersion = "QQ内嵌的浏览器";
-            }
-        }else if(header.indexOf("Opera")>0){
-            browserVersion = "Opera";
-        }else if(header.indexOf("Chrome")>0){
-            browserVersion = "Chrome";
-        }else if(header.indexOf("Firefox")>0){
-            browserVersion = "Firefox";
-        }else if(header.indexOf("Safari")>0){
-            browserVersion = "Safari";
-        }else if(header.indexOf("MSIE")>0){
-            browserVersion = "IE6/7/8/9/10";
-        }else if(header.indexOf("Camino")>0){
-            browserVersion = "Camino";
-        }else if(header.indexOf("rv:11.0")>0){
-            browserVersion = "IE11";
-        }else if(header.indexOf("Konqueror")>0){
-            browserVersion = "Konqueror";
-        }else if(header.indexOf("like Gecko")>0){
-            browserVersion = "Like Gecko";
-        }else {
-            browserVersion = header;
-        }
-        return browserVersion;
+        return getRequestBrowserInfo(header);
     }
 
     public String getRequestBrowserInfo(String header){
@@ -153,62 +98,8 @@ public final class IPUtil {
     }
 
     public String getRequestSystemInfo(HttpServletRequest request){
-        String systenInfo = null;
         String header = request.getHeader("user-agent");
-        if(header == null || header.equals("")){
-            return "未知内核的系统";
-        }
-        //得到用户的操作系统
-        if (header.indexOf("NT 6.0") > 0){
-            systenInfo = "Windows Vista / Windows Server 2008";
-        }else if (header.indexOf("Windows 3.1") > 0){
-            systenInfo = "Windows 3.1";
-        }else if (header.indexOf("NT 5.2") > 0){
-            systenInfo = "Windows XP 64Bit / Windows Server 2003";
-        } else if (header.indexOf("NT 5.1") > 0){
-            systenInfo = "Windows XP    ";
-        }else if (header.indexOf("NT 6.1") > 0){
-            systenInfo = "Windows 7 / Windows Server 2008 R2";
-        } else if (header.indexOf("NT 6.2") > 0){
-            systenInfo = "Windows 8 / Windows Server 2012";
-        } else if (header.indexOf("NT 6.3") > 0){
-            systenInfo = "Windows 8.1 / Windows Server 2012 R2";
-        } else if (header.indexOf("NT 5") > 0){
-            systenInfo = "Windows 2000";
-        } else if (header.indexOf("NT 4") > 0){
-            systenInfo = "Windows NT4";
-        } else if(header.indexOf("iPhone")>0){
-            systenInfo = "IOS(iPhone)";
-        } else if(header.indexOf("iPod")>0){
-            systenInfo = "IOS(iPod)";
-        } else if(header.indexOf("iPad")>0){
-            systenInfo = "IOS(iPad)";
-        }else if (header.indexOf("Mac") > 0){
-            systenInfo = "MacOS";
-        } else if (header.indexOf("Unix") > 0){
-            systenInfo = "UNIX";
-        } else if(header.indexOf("Android")>0){
-            systenInfo = "Android";
-        } else if (header.indexOf("Linux") > 0){
-            systenInfo = "Linux";
-        } else if (header.indexOf("SunOS") > 0){
-            systenInfo = "SunOS";
-        } else if(header.indexOf("FreeBSD") > 0){
-            systenInfo = "FreeBSD";
-        } else if(header.indexOf("NT 6.4") > 0){
-            systenInfo = "Windows 10";
-        } else if(header.indexOf("NT 10.0") > 0){
-            systenInfo = "Windows 10";
-        } else if (header.indexOf("Me") > 0){
-            systenInfo = "Windows Me";
-        } else if (header.indexOf("98") > 0){
-            systenInfo = "Windows 98";
-        } else if (header.indexOf("95") > 0){
-            systenInfo = "Windows 95";
-        }else {
-            systenInfo = header;
-        }
-        return systenInfo;
+        return getRequestSystemInfo(header);
     }
 
     public String getRequestSystemInfo(String header){

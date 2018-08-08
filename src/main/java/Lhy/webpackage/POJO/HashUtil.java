@@ -12,19 +12,16 @@ import java.security.NoSuchAlgorithmException;
 @Component
 public class HashUtil {
     public String getMD5(String str) {
-        try {
-            MessageDigest md = MessageDigest.getInstance("MD5");
-            md.update(str.getBytes());
-            return new BigInteger(1, md.digest()).toString(16);
-        } catch (NoSuchAlgorithmException e) {
-            e.printStackTrace();
-            return null;
-        }
+        return getStringHash("MD5",str);
     }
 
     public String getSHA1(String str) {
+        return getStringHash("SHA1",str);
+    }
+
+    private String getStringHash(String type,String str){
         try {
-            MessageDigest md = MessageDigest.getInstance("SHA1");
+            MessageDigest md = MessageDigest.getInstance(type);
             md.update(str.getBytes());
             return new BigInteger(1, md.digest()).toString(16);
         } catch (NoSuchAlgorithmException e) {
